@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdecd4;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #a86d83;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background-color: #a86d83;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(168, 109, 131, 0.2);
+}
+
+button:hover {
+  background-color: #ea9d00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(234, 157, 0, 0.3);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.user-card {
+  background-color: #efb2d6;
+  border-radius: 20px;
+  padding: 2rem;
+  display: none;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.user-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #ea9d00, #fcd38f);
+}
+
+.user-card.visible {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.user-image-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+
+.user-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fcd38f;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.data-row {
+  background-color: rgba(253, 236, 212, 0.3);
+  margin: 0.8rem 0;
+  padding: 0.8rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  color: #a86d83;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.value {
+  color: #333;
+  font-size: 1rem;
+  word-break: break-all;
+}
